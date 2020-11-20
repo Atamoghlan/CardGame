@@ -30,8 +30,44 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-tN-RX8">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-tN-RX8">
                                         <rect key="frame" x="0.0" y="244" width="414" height="122"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ow-Cn-3HR">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="122"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Replay">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.97702804870000004" green="1" blue="0.96478006350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="48" name="HelveticaNeue-BoldItalic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSi-Vh-p5S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1I-Hy-Gy6">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="122"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Exit">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.97702804873583604" green="1" blue="0.96478006350531198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="48" name="HelveticaNeue-BoldItalic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Exit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HId-q5-QK7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qxx-H8-b21">
                                         <rect key="frame" x="0.0" y="366" width="414" height="122"/>
@@ -103,7 +139,7 @@
                                                     <fragment content="0">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                                            <font key="NSFont" size="36" name="Helvetica"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -138,6 +174,7 @@
                         <outlet property="PlayerCard" destination="y7k-2h-XeZ" id="j4Z-r5-48r"/>
                         <outlet property="PlayerScore" destination="2wk-UV-u45" id="eEe-oZ-zqR"/>
                         <outlet property="action_button" destination="y3M-90-6GI" id="LIS-g6-z0p"/>
+                        <outlet property="exit_outlet" destination="w1I-Hy-Gy6" id="XDM-UM-hJp"/>
                         <outlet property="message" destination="CS0-xH-GVe" id="qbQ-E7-RDb"/>
                     </connections>
                 </viewController>

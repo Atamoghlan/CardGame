@@ -17,11 +17,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var PlayerCard: UIImageView!
     @IBOutlet weak var CPUScore: UILabel!
       @IBOutlet weak var PlayerScore: UILabel!
+    @IBAction func Exit(_ sender: UIButton) {
+        exit(0)
+    }
+    @IBOutlet weak var exit_outlet: UIButton!
+    @IBAction func Play(_ sender: UIButton) {
+        playerscore = 0
+        cpuscore = 0
+        PlayerScore.text = String(playerscore)
+        CPUScore.text = String(cpuscore)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         message.text = ""
+       
         // Do any additional setup after loading the view.
     }
     
@@ -44,17 +55,17 @@ class ViewController: UIViewController {
             playerscore += 1
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
-                 message.text = "WIN! Click Deal Button for new game"
-            playerscore = 0
-            cpuscore = 0
+                 message.text = "WIN!"
+            
+            
          }
          else if cpuscore==19 && playernumber<cpunumber {
             cpuscore += 1
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
-             message.text = "GAME OVER! Click to Deal Button to start a new game"
-            playerscore = 0
-            cpuscore = 0
+             message.text = "GAME OVER!"
+     
+            
          }
         else if (playernumber>cpunumber && playerscore < 19 && cpuscore < 19) {
             playerscore += 1
