@@ -48,8 +48,8 @@ class ViewController: UIViewController {
       
         //while playerscore<20 && cpuscore<20{
             
-        PlayerCard.image = UIImage (imageLiteralResourceName: "card\(cpunumber)")
-        CPUCard.image = UIImage (imageLiteralResourceName: "card\(playernumber)")
+        PlayerCard.image = UIImage (imageLiteralResourceName: "card\(playernumber)")
+        CPUCard.image = UIImage (imageLiteralResourceName: "card\(cpunumber)")
       
          if playerscore==19 && playernumber>cpunumber{
             playerscore += 1
