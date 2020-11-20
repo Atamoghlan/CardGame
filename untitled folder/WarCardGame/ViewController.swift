@@ -39,57 +39,12 @@ class ViewController: UIViewController {
             
         PlayerCard.image = UIImage (imageLiteralResourceName: "card\(cpunumber)")
         CPUCard.image = UIImage (imageLiteralResourceName: "card\(playernumber)")
-        /*if playernumber > cpunumber{
-            if playerscore < 19 {
-                playerscore += 1
-                message.text = "Player wins the round"
-                PlayerScore.text = String(playerscore)
-                CPUScore.text = String(cpuscore)
-            }
-            else if playerscore == 19
-            
-            {
-                playerscore += 1
-                PlayerScore.text = String(playerscore)
-                CPUScore.text = String(cpuscore)
-                message.text = "WIN! Click to Deal Button to start a new game"
-                playerscore = 0
-                cpuscore = 0
-           
-        }
-        else if playernumber < cpunumber {
-            if cpuscore < 19
-            {
-                cpuscore += 1
-                message.text = "cpu wins the round"
-                PlayerScore.text = String(playerscore)
-                CPUScore.text = String(cpuscore)
-            }
-            else if cpuscore == 19
-            {
-                cpuscore += 1
-                PlayerScore.text = String(playerscore)
-                CPUScore.text = String(cpuscore)
-                message.text = "GAME OVER! Click to Deal Button to start a new game"
-               playerscore = 0
-               cpuscore = 0
-            }
-           
-        }
-        else {
-            message.text = "draw"
-            PlayerScore.text = String(playerscore)
-            CPUScore.text = String(cpuscore)
-        }*/
-            
-            
-            
-            
+      
          if playerscore==19 && playernumber>cpunumber{
             playerscore += 1
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
-                 message.text = "WIN! Click to Deal Button to start a new game"
+                 message.text = "WIN! Click Deal Button for new game"
             playerscore = 0
             cpuscore = 0
          }
@@ -101,8 +56,6 @@ class ViewController: UIViewController {
             playerscore = 0
             cpuscore = 0
          }
-            
-         
         else if (playernumber>cpunumber && playerscore < 19 && cpuscore < 19) {
             playerscore += 1
             message.text = "Player wins the round"
@@ -121,15 +74,8 @@ class ViewController: UIViewController {
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
         }
-        
-   
-       
-        
-        
-        
-    
     }
-    }
+}
     
 
 
