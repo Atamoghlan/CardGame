@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var exit_outlet: UIButton!
     @IBAction func Play(_ sender: UIButton) {
-        DealOutlet.isHidden = false
+        action_button.isHidden = false
         playerscore = 0
         cpuscore = 0
         PlayerScore.text = String(playerscore)
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
                  message.text = "WIN!"
-            DealOutlet.isHidden = true
+            action_button.isHidden = true
             
             
          }
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
              message.text = "GAME OVER!"
-            DealOutlet.isHidden = true
+            action_button.isHidden = true
      
             
          }
