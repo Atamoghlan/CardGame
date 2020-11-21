@@ -22,16 +22,19 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var exit_outlet: UIButton!
     @IBAction func Play(_ sender: UIButton) {
+        DealOutlet.isHidden = false
         playerscore = 0
         cpuscore = 0
         PlayerScore.text = String(playerscore)
         CPUScore.text = String(cpuscore)
     }
+    @IBOutlet weak var DealOutlet: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         message.text = ""
+        
        
         // Do any additional setup after loading the view.
     }
@@ -56,6 +59,7 @@ class ViewController: UIViewController {
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
                  message.text = "WIN!"
+            DealOutlet.isHidden = true
             
             
          }
@@ -64,6 +68,7 @@ class ViewController: UIViewController {
             PlayerScore.text = String(playerscore)
             CPUScore.text = String(cpuscore)
              message.text = "GAME OVER!"
+            DealOutlet.isHidden = true
      
             
          }
